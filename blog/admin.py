@@ -6,8 +6,8 @@ class PostAdmin(admin.ModelAdmin):
     list_display = ['id','title','count_text']
     list_display_links = ['title']
 
-    def count_text(self, obj):
-        return '{}글자'.format(len(obj.text))
+    def count_text(self, post):
+        return '{}글자'.format(len(post.text))
     count_text.short_description = '글내용 글자수'
 
 
